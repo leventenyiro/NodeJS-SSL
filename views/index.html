@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        async function data() {
+            var res = await fetch("http://www.trophien.com:8080", {
+                method: "GET"
+            }).then(res => res.text())
+            document.getElementById("res").innerHTML = res;
+        }
+    </script>
+</head>
+<body onload="data()">
+    <h1 id="res"></h1>
+</body>
+</html>
